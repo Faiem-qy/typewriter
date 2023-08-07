@@ -1,10 +1,11 @@
-const sentence = "hello there from lighthouse labs";
+const sentence = "hello there from lighthouse labs ";
+const letters = sentence.split("");
 
+let delay = 0
 
-for (const char of sentence) {
-  // console.log(char);
-  // process.stdout.write(char)
-  setTimeout (() => {
-    process.stdout.write(char)
-  },1000)
+for (const char of letters) {
+  setTimeout(() => {
+    process.stdout.write(char);
+  }, delay);
+  delay += 100;
 }
